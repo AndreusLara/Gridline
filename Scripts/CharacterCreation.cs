@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class CharacterCreation : MonoBehaviour
 {
-
+// Creates a Game master object
     GM gm;
-
+// Makes buttons for the game
     public Button player1openButton;
     public Button player2openButton;
 
@@ -33,18 +33,18 @@ public class CharacterCreation : MonoBehaviour
             player1openButton.interactable = false;
         }
     }
-
+//  Open feature for toggling the game
     public void ToggleMenu(GameObject menu) {
         menu.SetActive(!menu.activeSelf);
     }
-
+//  CLose feature for toggling the game menu
     public void CloseCharacterCreationMenus() {
         player1Menu.SetActive(false);
         player2Menu.SetActive(false);
     }
-
+// Buy Unit Feature
     public void BuyUnit (Unit unit) {
-
+    
         if (unit.playerNumber == 1 && unit.cost <= gm.player1Gold)
         {
             player1Menu.SetActive(false);
